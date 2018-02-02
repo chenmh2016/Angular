@@ -19,5 +19,9 @@ export class HeroService {
       setTimeout(() => resolve(this.getHeroes()), 2000);
     });
   }
+  getHero(id: number): Promise<Hero> {
+    return this.getHeroes()
+      .then(heroes => heroes.find(hero => hero.id === id));
+  }
 }
 // 当ts看到@injectable（）装饰器时候，就会记下本服务的元数据，如果angular需要往这个服务中注入其他依赖，就会使用这些元数据
