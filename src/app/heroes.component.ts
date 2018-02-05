@@ -6,7 +6,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'my-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./heroes.component.css'],
   // providers: [HeroService]
 })
 export class HeroesComponent implements OnInit {
